@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Ejercicio 2</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class ="caja">
+        <form action="/ejercicio2" method="POST">
+
+            <label class="label2">Nombre 1:</label>
+            <input type="text" name="nombre1" pattern="^[A-Za-záéíóúÁÉÍÓÚ\s]+$" required>
+            <br>
+
+            <label class="label2">Nombre 2:</label>
+            <input type="text" name="nombre2" pattern="^[A-Za-záéíóúÁÉÍÓÚ\s]+$" required>
+            <br>
+
+            <label class="label2">Nombre 3:</label>
+            <input type="text" name="nombre3" pattern="^[A-Za-záéíóúÁÉÍÓÚ\s]+$" required>
+            <br>
+
+            <input class="botones" type="submit" value="Enviar" style="align-self: center;">
+            <br>
+
+            </form>
+
+            {% if nombreLargo %}
+            <div>
+
+            <p>El nombre con mayor cantidad de caracteres es: {{nombreMayor}}</p>
+            <p>El nombre tiene {{nombreLargo}} caracteres</p>
+
+            </div>
+            {% endif %}
+
+    </div>
+</body>
+</html>
